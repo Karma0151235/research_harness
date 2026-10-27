@@ -6,7 +6,7 @@
 Status: <…>   Last updated: YYYY-MM-DD
 
 ## Projects
-| Code | Title | Tier (§0.6) | Weight | Deadline | Status | Current step |
+| Code | Title | Mode (§0.5) | Weight | Deadline | Status | Current step |
 |---|---|---|---|---|---|---|
 
 ## Harness work (changes to tracked files: AGENTS.md, templates/, README.md)

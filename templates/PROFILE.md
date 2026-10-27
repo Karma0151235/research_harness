@@ -19,7 +19,7 @@
 - Referencing style: APA 7 (root §4.4) unless the brief says otherwise
 - Word limits and rubrics apply only if the brief states them: <yes/no>
 - Language variety: <British / American English>
-- Default rigour tier for new projects (root §0.6): <C | M | D>
+- Default agent mode where the policy allows (root §0.5): <Produce | Assist>
 
 ## 3. AI-use policy
 Source document: <path in the local course folder, e.g. Course/…AI declaration form…>

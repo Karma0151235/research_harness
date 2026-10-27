@@ -2,8 +2,12 @@
 
 Operating manual for any agent doing research, analysis or writing in this repository.
 It holds the **bootstrap protocol**, **general rules**, **quality gates**, and a **Knowledge Base**
-distilled from a Masters research methodology course (§5.1–5.16), extended toward
-doctoral / journal standard (§5.17 onward).
+distilled from a Masters research methodology course (§5.1–5.16), extended to
+doctoral / journal standard (§5.17 onward). **All work is held to doctoral standard** (§0.6).
+
+Direction of travel: the harness keeps growing (§7) toward a research assistant that produces
+the work end-to-end, so that the researcher's job is to brainstorm and decide the direction.
+How much the agent produces in any one project is set by its **agent mode** (§0.5).
 
 The harness is **plug-and-play**: this file, `CLAUDE.md`, `README.md` and `templates/` are tracked.
 Everything personal or project-specific (`PROFILE.md`, root `PROGRESS.md`, project folders, course
@@ -46,7 +50,7 @@ Every task, every session, no exceptions:
 ├── admin/
 │   ├── AI_USE_LOG.md         # running log of AI assistance: the "work trace" (§2.4)
 │   ├── AI_Declaration.*      # filled from the log once the institution's form is available
-│   └── PAP.md                # pre-analysis plan (empirical work, tiers M/D; §2.6)
+│   └── PAP.md                # pre-analysis plan (all empirical work; §2.6)
 ├── brief/             # notes on the brief (never commit copyrighted originals)
 ├── sources/
 │   ├── references.md  # every source: APA entry + DOI + verification + index status + read status
@@ -61,7 +65,7 @@ repository inside its folder; never push course materials or copyrighted PDFs.
 ### 0.2 Project `AGENTS.md` must contain
 
 1. Header: course/context, assessment name, weight, group size, deadline (date + time + mode of
-   submission), **rigour tier** (§0.6).
+   submission), **agent mode** (§0.5).
 2. The questions/tasks **verbatim**, each with its marks.
 3. A **requirements matrix**: every explicit requirement → where it is satisfied → how it is checked.
    Include implicit requirements ("critical engagement", "cite other studies", "minimum 2 WoS articles").
@@ -76,7 +80,7 @@ repository inside its folder; never push course materials or copyrighted PDFs.
 ```markdown
 # PROGRESS — <project>
 Status: <Not started | In progress | Blocked | Review | Done>   Last updated: YYYY-MM-DD
-Deadline: YYYY-MM-DD HH:MM   Days left: N   Tier: <C/M/D>   Next gate: <G0–G5>
+Deadline: YYYY-MM-DD HH:MM   Days left: N   Mode: <Assist/Produce>   Next gate: <G0–G5>
 
 ## Plan
 - [ ] 1. <Phase>
@@ -108,8 +112,23 @@ a dissertation or thesis chapter. Before any research on content:
    risks. Give a recommendation.
 3. **Stop and let the user choose.** Record the choice in the Decisions log. Only then plan the content phases.
 
-### 0.5 Division of labour: agent vs. user
-The user writes the **final prose**. Agents do:
+### 0.5 Division of labour: agent modes
+The researcher always owns the **direction** (questions, topic, contribution, key design choices)
+and is accountable for the result. How much the agent produces depends on the project's mode,
+declared in the project `AGENTS.md`. The mode is **capped by the AI-use policy** that applies to
+the work (`PROFILE.md` §3, or the target journal's/institution's policy). If the policy is
+unclear, use Assist and ask.
+
+**Produce mode** (default where policy allows: own research, papers, non-assessed work):
+- Brainstorm with the researcher first: candidate directions, contributions, risks (§0.4, §5.19).
+  Record the researcher's decisions in the Decisions log; do not decide direction alone.
+- Then produce the work end-to-end: literature, data, analysis, full drafts, tables, figures,
+  replication package, passing every gate (§0.7).
+- At each gate, give the researcher a short decision brief (what was done, what was found, the
+  choices made and the alternatives) so they can steer and can defend every part (§6.8).
+- Disclose AI use as the venue requires; AI is never listed as an author.
+
+**Assist mode** (when policy limits AI, e.g. assessed coursework at a restricted level):
 - **Research**: literature search, reading, verified reference lists, evidence banks, data scouting.
 - **Outlines**: argument structure in bullet form, linked to the requirements matrix and to sources.
   Each bullet is a claim plus its evidence, not finished sentences for submission.
@@ -119,19 +138,31 @@ The user writes the **final prose**. Agents do:
 - **Feedback loops**: iterate draft → pushback → revision until the QA gate (§6.3) passes.
 - **Analysis code** (empirical projects): written to §3 standards; the user must be able to explain
   every modelling choice.
-Agents do **not** write submission-ready paragraphs unless the user explicitly asks for one in the
-current session. Log each such request in `admin/AI_USE_LOG.md`.
+- The user writes the **final prose**. Agents do not write submission-ready paragraphs unless the
+  user explicitly asks for one in the current session; log each such request in `admin/AI_USE_LOG.md`.
+
+In both modes every AI contribution is logged (§2.4) and the declaration describes actual use.
 Files: outlines go in `drafts/outline_<part>_vNN.md`, pushback in `drafts/pushback_<part>_vNN.md`,
-and the user's drafts in `drafts/<part>_vNN.md` (or a .docx the user points to).
+drafts in `drafts/<part>_vNN.md` (or a .docx the user points to).
 
-### 0.6 Rigour tiers
-Every project declares a tier in its `AGENTS.md`. Higher tiers include everything below them.
-
-| Tier | Typical project | Additional requirements |
-|---|---|---|
-| **C** — coursework | Assignment, article critique, method essay | Verified sources; requirements matrix; pushback loop; QA (§6.3) |
-| **M** — Masters | Research proposal, dissertation | Structured literature search (§6.4) with a logged search; explicit contribution statement (§5.19); conceptual framework → hypotheses; PAP for empirical work (§2.6); replication-ready code (§3); limitations and threats-to-validity table |
-| **D** — doctoral / journal | Thesis chapter, journal paper, conference paper | Systematic or systematic-lite review with PRISMA-style flow where appropriate (§5.18); identification defended against the strongest alternative explanation (§5.17); pre-specified robustness and multiple-testing control; power / minimum detectable effect; full replication package run on a clean environment; independent referee-style review (§6.5) before submission; positioning against the frontier (last 3–5 years of top field journals) |
+### 0.6 Rigour standard: always doctoral
+Every project, whatever its weight or audience, is done to the standard of a strong doctoral
+thesis chapter or journal paper. Rigour is never scaled down; only **presentation** adapts to
+the audience and the brief (length, format, depth of notation). Rigorous work, well presented, is
+digestible for any reader. Concretely, every project gets:
+- A structured, logged literature search (§6.4), positioned against the frontier (last 3–5 years
+  of top field journals) as well as the classics; systematic review with a PRISMA flow when the
+  question calls for one (§5.18).
+- An explicit contribution statement (§4.5, §5.19) and a conceptual framework that generates the
+  hypotheses (§5.5).
+- Identification defended against the strongest alternative explanation, with the estimand
+  stated (§5.17); a threats-to-validity table (§5.7).
+- For empirical work: a frozen pre-analysis plan, pre-specified robustness, multiple-testing
+  control, power / minimum detectable effect (§2.6), and a replication package that runs on a
+  clean environment (§3.15).
+- An independent referee-style review before submission (§6.5) and viva-style preparation (§6.8).
+When a brief's length limit forces cuts, cut breadth, not rigour: fewer points, each fully
+argued and evidenced. Keep extra rigour in appendices or the work trace if the format allows.
 
 ### 0.7 Quality gates
 A gate is a stop: record pass/fail with evidence in the Decisions log before moving on. A failed
@@ -140,7 +171,7 @@ gate means revising the earlier step, not pushing ahead.
 | Gate | Before | Pass when |
 |---|---|---|
 | **G0 Problem** | Literature work | General → specific problem written; gap stated with **why it matters**; RQ ↔ RO table 1:1 (§5.3); feasible with available data/time |
-| **G1 Design** | Data/analysis | Method follows from the RQ, not the reverse (§2.3); identification assumptions listed with how each is assessed; tier M/D: PAP frozen |
+| **G1 Design** | Data/analysis | Method follows from the RQ, not the reverse (§2.3); identification assumptions listed with how each is assessed; empirical work: PAP frozen |
 | **G2 Evidence** | Outlining/writing | Every source to be cited is verified and read at least to the claim it supports (§2.1); review matrix complete; contrary evidence included |
 | **G3 Analysis** | Interpreting results | Code runs end-to-end from raw (§3); diagnostics reported; robustness list executed; deviations from PAP logged |
 | **G4 Draft** | Final QA | Pushback has no open "major" items; argument passes the reliability tests (§5.2); every claim cited or evidenced |
@@ -243,7 +274,7 @@ Member/identity fields default to **blank** in every new project. Fill them only
 `PROFILE.md`, the project's `AGENTS.md`, or the user.
 
 ### 2.5 Definition of done (any deliverable)
-- Every requirement in the project matrix is met and evidenced; all gates for the tier passed (§0.7).
+- Every requirement in the project matrix is met and evidenced; all gates passed (§0.7).
 - Every in-text citation ↔ reference-list entry, one-to-one [L7]; all references verified.
 - APA 7 throughout (§4.4) unless the brief says otherwise; format requirements met.
 - Spelling/grammar pass done; numbers, tables and figures referenced in text.
@@ -251,7 +282,7 @@ Member/identity fields default to **blank** in every new project. Fill them only
 - Final prose is the user's (§0.5); any agent-written passage the user asked for is logged.
 - Final file exported in the required format; submission checklist ticked in `output/`.
 
-### 2.6 Transparency and reproducibility (tiers M/D; good practice at C)
+### 2.6 Transparency and reproducibility (all projects)
 - **Pre-analysis plan** (`templates/PAP.md`) frozen before outcome data are examined: hypotheses,
   variables, primary specification, robustness list, inference choices. Deviations are allowed but
   logged with date and reason [EXT – verify: Nosek et al., 2018; Christensen & Miguel, 2018].
@@ -308,7 +339,7 @@ Applies to any analysis in `<PROJECT>/analysis/` (Python, R, Stata).
 13. **Tests for transformations**: small unit tests (or assertion scripts) for merges, deflators,
     variable construction; check row counts before/after every merge.
 14. **Notebooks for exploration only**; anything that feeds a result lives in a script.
-15. **Replication package** (tier M/D): README with requirements, run time, data access, and the
+15. **Replication package**: README with requirements, run time, data access, and the
     mapping from each table/figure to the script that produces it [EXT – verify: Social Science
     Data Editors' template README]. Test it by running from a fresh clone and clean environment.
 
@@ -361,7 +392,7 @@ Applies to any analysis in `<PROJECT>/analysis/` (Python, R, Stata).
 - Software: `Author. (Year). Title (Version) [Computer software]. Publisher. URL`.
 - Datasets: `Organisation. (Year). Title of dataset (Version) [Data set]. Publisher. URL`.
 
-### 4.5 Contribution and framing (tiers M/D)
+### 4.5 Contribution and framing
 - State the contribution in the introduction in **one to three sentences**, naming its type
   (§5.19) and against which literature it is a contribution.
 - Introduction formula: big picture → gap → research problem → what this study does → what it
@@ -531,7 +562,7 @@ material; verify against the literature before relying on it or citing it.
   20–30 non-sample subjects; Cronbach's α ≥ .70; drop items only if they substantially raise α;
   delete no more than 20% of items). Measurement levels: nominal, ordinal, interval, ratio.
 - [EXT – verify] Threats-to-validity framing (Shadish, Cook & Campbell, 2002): statistical
-  conclusion, internal, construct, external validity. Tier M/D proposals include a table:
+  conclusion, internal, construct, external validity. Every proposal and empirical paper includes a table:
   threat → why it applies here → how the design addresses it → residual risk.
 
 ### 5.8 Mixed methods research [L10, L11, FL]
@@ -695,7 +726,7 @@ framework; data description & sources; empirical strategy/model specification; l
 Significance (how the gap is bridged) → Organisation of the study → (Output, Gantt, Budget if
 required) → References (1:1 with citations).
 The proposal is a plan, not a straitjacket; major changes may need approval [L7].
-Tier M/D additions: contribution statement (§4.5), threats-to-validity table (§5.7), PAP summary
+Always include: contribution statement (§4.5), threats-to-validity table (§5.7), PAP summary
 (§2.6), data-availability evidence (what was actually checked, when), risk register with fallbacks.
 
 ### 5.16 Ethics [L7]
@@ -748,7 +779,7 @@ Beyond the course; verify each source before citing.
 - **Publication bias**: funnel plots, FAT-PET-PEESE (Stanley & Doucouliagos, 2014), selection
   models (Andrews & Kasy, 2019). Economics evidence is often underpowered and inflated
   (Ioannidis et al., 2017).
-- Systematic-lite (tier M): documented search + inclusion criteria + review matrix, without full
+- Systematic-lite (when a full review is out of scope): documented search + inclusion criteria + review matrix, without full
   risk-of-bias scoring.
 
 ### 5.19 Contribution and positioning [EXT – verify]
@@ -827,7 +858,7 @@ Walk the requirements matrix line by line; check marks ↔ length balance; citat
 APA spot-check of every entry; terminology consistent; every figure/equation explained; title page
 fields; AI declaration; export and open the final file to confirm it renders.
 
-### 6.4 Literature search protocol (tier M/D; recommended at C)
+### 6.4 Literature search protocol (every project)
 1. Define the question and 3–6 concept blocks; list synonyms per block; combine with AND/OR.
 2. Search at least two databases plus one grey-literature source; log each search in
    `sources/search_log.md` (database, string, filters, date, hits, kept).
@@ -839,11 +870,11 @@ fields; AI declaration; export and open the final file to confirm it renders.
 ### 6.5 Pushback / referee report
 Use `templates/pushback.md`. Structure: one-line verdict → requirement coverage → major issues
 (each: problem → why it matters → direction of fix → evidence) → moderate → minor → what works →
-questions only the author can answer → gate status. For tier D, also write it as a journal referee
+questions only the author can answer → gate status. Also write it as a journal referee
 would: summary of the paper's claim, assessment of contribution, identification, and whether the
 conclusions follow; recommendation with the conditions that would change it.
 
-### 6.6 Empirical project pipeline (tiers M/D)
+### 6.6 Empirical project pipeline
 Question and contribution (G0) → data scouting with a coverage table (units × years × variables,
 access tested) → PAP frozen (G1) → `01_clean` with assertions → descriptive statistics and plots
 → primary estimation with diagnostics → pre-specified robustness and heterogeneity → deviations
@@ -860,3 +891,21 @@ From the final draft, generate the 15–20 hardest questions an examiner could a
 identification, alternative explanations, data choices, limitations, AI use). The user answers in
 their own words; the agent pushes back on weak answers. Every number and citation in the
 deliverable must be explainable without notes.
+
+---
+
+## 7. Growing the harness
+
+The harness improves with every project. Goal: an assistant that can take a research direction
+from the researcher and deliver doctoral-standard work with minimal hand-holding.
+1. **Retrospective at project end**: add a `Lessons` section to the project `PROGRESS.md`
+   (what slowed the work, what the assessor/supervisor criticised, what an agent got wrong).
+2. **Promote lessons**: turn recurring lessons into rules, Knowledge Base entries, playbooks or
+   templates here. Propose the change to the user first; record approved changes in `CHANGELOG.md`.
+3. **New methods**: when a project uses a method not in §5, add a section with its assumptions,
+   diagnostics, pitfalls and verified key references (tag `[EXT – verify]` until checked).
+4. **Automate repeated work** (reference verification, search logging, table generation) as small
+   scripts under `tools/` with the same standards as §3; document each in `README.md`.
+5. **Keep it general**: no personal, institutional or project-specific content in tracked files;
+   that belongs in `PROFILE.md` or the project folder.
+

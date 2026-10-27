@@ -1,7 +1,7 @@
 # PROGRESS — <PROJECT CODE>
 Status: Not started   Last updated: YYYY-MM-DD
 Deadline: YYYY-MM-DD HH:MM   Days left: N
-Current step: <n.n>   Tier: <C/M/D>   Next gate (§0.7): <G0–G5>
+Current step: <n.n>   Mode: <Produce/Assist>   Next gate (§0.7): <G0–G5>
 
 ## Plan
 - [ ] 0. Setup
@@ -15,7 +15,7 @@ Current step: <n.n>   Tier: <C/M/D>   Next gate (§0.7): <G0–G5>
 - [ ] 2. Research (agent)
   - [ ] 2.1 Literature search per part; references.md entries verified. Done when: ≥ required number of verified (and WoS-checked if needed) sources per part
   - [ ] 2.2 Review matrix filled. Done when: every source has purpose/method/findings/relevance
-  - [ ] 2.3 Design fixed (empirical work: `admin/PAP.md` frozen for tier M/D). Gate G1 (design) + G2 (evidence) passed
+  - [ ] 2.3 Design fixed (empirical work: `admin/PAP.md` frozen). Gate G1 (design) + G2 (evidence) passed
 - [ ] 3. Outlines (agent)
   - [ ] 3.x Outline per part: claim + evidence bullets, mapped to matrix rows. Done when: every requirement for that part has ≥1 bullet with a source
 - [ ] 4. Drafting (user) ↔ pushback (agent) loop
@@ -27,7 +27,7 @@ Current step: <n.n>   Tier: <C/M/D>   Next gate (§0.7): <G0–G5>
   - [ ] 6.2 Citations ↔ references 1:1; APA spot-check of every entry
   - [ ] 6.3 Format check; export; open exported file to confirm it renders
   - [ ] 6.4 AI_USE_LOG final; declaration filled from the log
-  - [ ] 6.5 Tier M/D: replication package runs from raw on a clean environment; independent review pass done
+  - [ ] 6.5 Replication package runs from raw on a clean environment; independent review pass done
 - [ ] 7. Submission
   - [ ] 7.1 Spectrum upload <date> · hard copy <date/time> (user)
 
@@ -43,4 +43,5 @@ Current step: <n.n>   Tier: <C/M/D>   Next gate (§0.7): <G0–G5>
 
 ## Decisions log
 ## Open questions
+## Lessons (at project end; root §7)
 ## Handoff

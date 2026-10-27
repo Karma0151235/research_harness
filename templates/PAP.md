@@ -1,4 +1,4 @@
-# Pre-analysis plan — <PROJECT>   (root AGENTS.md §2.6, tiers M/D)
+# Pre-analysis plan — <PROJECT>   (root AGENTS.md §2.6)
 Version: v01   Frozen on: YYYY-MM-DD (commit / file hash: ______)
 Written **before** looking at outcome data. Later changes go in §9 with date and reason.
 

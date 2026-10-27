@@ -13,7 +13,7 @@
 | Members | <Name, Matric No.> (blank by default) |
 | Programme | <blank by default> |
 | Deadline | <YYYY-MM-DD HH:MM>; <submission mode> |
-| Rigour tier | <C coursework · M masters · D doctoral/journal> (root §0.6) |
+| Agent mode | <Produce / Assist>, capped by the AI-use policy (root §0.5) |
 | Permitted AI level | <from the AI-use policy in `/PROFILE.md` §3> |
 | Open-ended? | <Yes/No>. If yes, follow root §0.4 before any content work |
 

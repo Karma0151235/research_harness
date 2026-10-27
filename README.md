@@ -1,8 +1,12 @@
 # research_harness
 
 A plug-and-play harness for running research projects with AI agents (Claude Code, Codex, or any
-agent that reads `AGENTS.md`). Agents do research, outlines, pushback and feedback loops; you write
-the final prose. Rigour scales from coursework to doctoral/journal work (`AGENTS.md` §0.6).
+agent that reads `AGENTS.md`). Every project is held to doctoral standard; only the presentation
+adapts to the audience (`AGENTS.md` §0.6). The goal is a research assistant that produces the work
+while the researcher brainstorms and decides the direction. Where an AI-use policy restricts that
+(e.g. assessed coursework), the agent switches to Assist mode: research, outlines and pushback,
+with the researcher writing the final prose (`AGENTS.md` §0.5). The harness grows with every
+project (`AGENTS.md` §7).
 
 ## What is tracked
 | File | Purpose |

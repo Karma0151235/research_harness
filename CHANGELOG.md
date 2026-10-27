@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-27 (later)
+- Removed rigour tiers: every project is held to doctoral standard; only presentation adapts (§0.6).
+- §0.5 now defines agent modes: Produce (agent delivers the work; researcher sets direction) and
+  Assist (research, outlines, pushback; researcher writes final prose), capped by the AI-use policy.
+- Added §7 Growing the harness (retrospectives, promoting lessons, new methods, tools/).
+- Templates: tier fields replaced by agent mode; Lessons section in project PROGRESS.
+
 ## 2026-10-27
 - Plug-and-play split: personal and institution settings moved to local `PROFILE.md`
   (`templates/PROFILE.md`); root `PROGRESS.md` is local (`templates/ROOT_PROGRESS.md`);
