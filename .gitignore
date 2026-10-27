@@ -1,0 +1,15 @@
+# Whitelist: only the plug-and-play harness is tracked.
+# Everything else (projects, course materials, personal profile, workspace progress) stays local.
+/*
+!/.gitignore
+!/AGENTS.md
+!/CLAUDE.md
+!/README.md
+!/CHANGELOG.md
+!/templates/
+
+# Never track, even inside whitelisted folders
+.DS_Store
+__pycache__/
+.venv/
+*.pdf
